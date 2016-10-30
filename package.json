@@ -1,0 +1,41 @@
+{
+  "name": "mishka",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nezdara/mishka.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nezdara/mishka/issues"
+  },
+  "homepage": "https://github.com/Nezdara/mishka#readme",
+  "devDependencies": {
+    "autoprefixer": "6.3.6",
+    "browser-sync": "^2.12.10",
+    "css-mqpacker": "^5.0.1",
+    "del": "^2.2.1",
+    "editorconfig-tools": "0.1.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-svgstore": "^6.0.0",
+    "run-sequence": "^1.2.1"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
+  },
+  "engines": {
+  "node": "5.11"
+  }
+}
