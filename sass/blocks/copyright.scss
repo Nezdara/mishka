@@ -1,0 +1,27 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 23px 0;
+  border-top: 1px solid $copyright-border;
+}
+
+@media #{$tablet} {
+  .copyright {
+    width: auto;
+    border: none;
+    padding: 0;
+  }
+}
+
+.copyright__text {
+  margin-right: 25px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+
+  &:active {
+    color: $copyright-text-down;
+  }
+}
