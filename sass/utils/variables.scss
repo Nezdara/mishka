@@ -1,3 +1,50 @@
+$bg-color: #ffffff;
+$text-color: #000000;
+
+$main-nav-link: #000000;
+$main-nav-link-hover: rgba(#000000, .6);
+$main-nav-link-down: rgba(#000000, .3);
+
+$sub-header-index-bg: #f9f9f9;
+$sub-header-bg: #f1f1f1;
+
+$category-btn-link: #ffffff;
+$category-btn-link-down: rgba(#ffffff, .3);
+$category-btn-left: #63d1bb;
+$category-btn-left-hover: #59d5bc;
+$category-btn-right: #56c3b2;
+$category-btn-right-hover: #46c1ae;
+
+$btn-text: #444444;
+$btn-text-hover: #ffffff;
+$btn-text-down: rgba(#ffffff, .3);
+$btn-border: #444444;
+$btn-color-hover: #444444;
+
+$footer-bg: #f1f1f1;
+
+$item-link: #000000;
+$item-link-hover: rgba(#000000, .6);
+$item-link-down: rgba(#000000, .3);
+
+$radio-border: #444444;
+$radio-border-hover: #62d1ba;
+$radio-border-down: rgba(#444444, .3);
+$radio-pip: #62d1ba;
+
+$check-border: #444444;
+$check-border-hover: #62d1ba;
+$check-border-down: rgba(#444444, .3);
+$check-pip: #231f20;
+
+$input-text: #444444;
+$input-placeholder-text: rgba(#444444, .3);
+$input-border: #000000;
+$input-border-hover: #62d1ba;
+$input-border-error: #f0b1b1;
+
+$font-family: "Open Sans", "Arial", sans-serif;
+
 $mobile-only: "(max-width: 767px)";
 $tablet: "(min-width: 768px)";
 $desktop: "(min-width: 1150px)";

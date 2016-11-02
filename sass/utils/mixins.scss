@@ -1,12 +1,22 @@
 @mixin container {
-	width: auto;
+  width: auto;
 
-	@media #{$tablet} {
-		max-width: 1150px;
-		margin: 0 auto;
-	}
+  @media #{$tablet} {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
 
-	@media #{$desktop} {
+  @media #{$desktop} {
     width: 1150px;
   }
+}
+
+@mixin button {
+  padding: 16px;
+  border: 2px solid $btn-border;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  color: $btn-text;
+  text-transform: uppercase;
 }
