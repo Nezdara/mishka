@@ -1,0 +1,10 @@
+.footer-logo {
+  display: none;
+}
+
+@media #{$tablet} {
+  .footer-logo {
+    display: block;
+    padding: 50px 0;
+  }
+}

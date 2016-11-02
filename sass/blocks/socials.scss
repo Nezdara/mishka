@@ -1,0 +1,23 @@
+.socials {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 28px;
+}
+
+@media #{$tablet} {
+  .socials {
+    align-items: center;
+    width: auto;
+    padding: 0;
+  }
+}
+
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  font-size: 0;
+}
