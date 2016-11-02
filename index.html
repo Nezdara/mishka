@@ -24,9 +24,14 @@
           <a href="#" class="main-nav__link">Корзина: пока пуста</a>
         </li>
       </ul>
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
     </nav>
     <div class="logo">
-      <img src="#" alt="" class="logo__img">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img class="logo__img" src="img/logo-mobile.svg" alt="Mishka">
+      </picture>
     </div>
   </header>
 </body>
