@@ -18,5 +18,16 @@
   line-height: 16px;
   font-weight: bold;
   color: $btn-text;
+  background-color: $btn-color;
   text-transform: uppercase;
+  outline: none;
+
+  &:hover {
+    color: $btn-text-hover;
+    background-color: $btn-color-hover;
+  }
+
+  &:active {
+    color: $btn-text-down;
+  }
 }

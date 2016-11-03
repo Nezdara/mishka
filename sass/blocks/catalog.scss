@@ -1,0 +1,20 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
+}
+
+@media #{$tablet} {
+  .catalog {
+    padding: 0 50px;
+  }
+}
+
+@media #{$desktop} {
+  .catalog {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
