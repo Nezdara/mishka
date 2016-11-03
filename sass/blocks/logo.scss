@@ -1,0 +1,11 @@
+.logo {
+  text-align: center;
+  padding: 21px 0;
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+}
+
+@media #{$tablet} {
+    .logo {
+      display: none;
+    }
+}

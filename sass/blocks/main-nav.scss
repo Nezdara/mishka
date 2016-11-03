@@ -1,0 +1,141 @@
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  font-size: 0;
+}
+
+.main-nav__item {
+  position: relative;
+  width: 100%;
+  padding: 28px 0 28px 30px;
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+
+  &--logo {
+    text-align: center;
+    padding: 21px 0;
+  }
+}
+
+.main-nav__link {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 184px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+
+  &:hover {
+    color: $main-nav-link-hover;
+  }
+
+  &:active {
+    color: $main-nav-link-down;
+  }
+
+  &--search::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -44px;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icon-search.svg") no-repeat;
+  }
+
+  &--basket::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -44px;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icon-cart.svg") no-repeat;
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
+  font-size: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 2;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: block;
+  width: 20px;
+  height: 14px;
+  background-color: $bg-color;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: $text-color;
+  box-shadow: 0 6px 0 0 $text-color, 0 12px 0 0 $text-color;
+}
+
+.main-nav--opened .main-nav__toggle {
+  font-size: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 2;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: block;
+  width: 21px;
+  height: 20px;
+  background-color: transparent;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    z-index: 2;
+    width: 21px;
+    height: 2px;
+    background-color: $text-color;
+    cursor: pointer;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media #{$mobile-only} {
+  .main-nav--closed .main-nav__item,
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+}
+
+@media #{$tablet} {
+  .main-nav__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-nav__item:nth-child(2),
+  .main-nav__item:nth-child(3) {
+    display: none;
+  }
+
+  .main-nav .main-nav__toggle {
+    display: none;
+  }
+}
