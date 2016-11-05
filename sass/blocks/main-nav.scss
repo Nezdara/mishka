@@ -1,27 +1,27 @@
 .main-nav__list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   font-size: 0;
 }
 
 .main-nav__item {
-  position: relative;
   width: 100%;
-  padding: 27px 30px;
-  border-top: 1px solid #ececec;
+  padding: 27px 45px 27px 75px;
+  border-top: 1px solid $main-nav-item-border;
 
   &--logo {
+    padding: 21px 45px;
     text-align: center;
-    padding: 21px 0;
   }
+}
+
+.main-nav__wrapper {
+  margin: 0 auto;
+  width: 200px;
 }
 
 .main-nav__link {
   position: relative;
-  display: block;
-  margin: 0 auto;
-  width: 184px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
@@ -38,7 +38,7 @@
     content: "";
     position: absolute;
     top: 2px;
-    left: -44px;
+    left: -40px;
     width: 20px;
     height: 20px;
     background: url("../img/icon-search.svg") no-repeat;
@@ -48,12 +48,13 @@
     content: "";
     position: absolute;
     top: 2px;
-    left: -44px;
+    left: -40px;
     width: 20px;
     height: 20px;
     background: url("../img/icon-cart.svg") no-repeat;
   }
 }
+// Кнопка открытия-закрытия меню
 
 .main-nav--closed .main-nav__toggle {
   font-size: 0;
@@ -128,15 +129,78 @@
 @media #{$tablet} {
   .main-nav__list {
     flex-direction: row;
-    justify-content: space-between;
   }
 
-  .main-nav__item:nth-child(2),
-  .main-nav__item:nth-child(3) {
+  .main-nav .main-nav__toggle,
+  .main-nav__item--catalog,
+  .main-nav__item--form {
     display: none;
   }
 
+  .main-nav__item {
+    width: auto;
+    padding: 30px 45px 30px 75px;
+    border: 1px solid $main-nav-item-border;
+    border-top: 0;
+
+    &--search {
+      width: 84px;
+      padding: 30px;
+      border-left: 0;
+      border-right: 0;
+    }
+
+    &--logo {
+      flex-grow: 1;
+      padding: 21px 45px;
+    }
+
+    &--basket {
+      width: 316px;
+    }
+  }
+
+  .main-nav__link--search {
+    font-size: 0;
+
+    &::before {
+      top: -7px;
+      left: 3px;
+    }
+  }
+}
+
+@media #{$desktop} {
   .main-nav .main-nav__toggle {
     display: none;
+  }
+
+  .main-nav__item--catalog,
+  .main-nav__item--form {
+    display: block;
+    width: 238px;
+    padding: 30px;
+  }
+
+  .main-nav__item--catalog {
+    padding-left: 50px;
+  }
+
+  .main-nav__item--form {
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .main-nav__item--logo {
+    text-align: left;
+    padding: 7px 30px 7px 24px;
+    flex-grow: 1;
+    order: 1;
+    border-left: 0;
+  }
+
+  .main-nav__item--basket,
+  .main-nav__item--search {
+    order: 2;
   }
 }
