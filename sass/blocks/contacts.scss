@@ -63,14 +63,32 @@
   }
 }
 
-.contacts__td--line::after {
+.contacts__email {
+  &:hover {
+    color: $contacts-email-hover;
+  }
+
+  &:active {
+    color: $contacts-email-down;
+  }
+}
+
+.contacts__email::after {
   content: "";
   position: absolute;
   width: 154px;
   height: 1px;
   top: 27px;
   left: 0;
-  background-color: #62d1ba;
+  background-color: $contacts-email;
+}
+
+.contacts__email:hover::after {
+  background-color: $contacts-email-hover;
+}
+
+.contacts__email:active::after {
+  background-color: $contacts-email-down;
 }
 @media #{$tablet} {
   .contacts__info {

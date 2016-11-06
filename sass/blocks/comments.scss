@@ -3,7 +3,7 @@
   flex-direction: column;
   padding: 30px;
   background-image: url('../img/bg-zigzag-line.svg');
-  background-size: 100% 6px;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom;
 }
@@ -14,8 +14,12 @@
     justify-content: space-between;
     padding: 50px;
     background-image: url("../img/review@1x.jpg"), url('../img/bg-zigzag-line.svg');
-    background-size: 350px, 100% 17px;
+    background-size: 350px, 100%;
     background-position: top left, bottom;
+    @media #{$retina} {
+      background-image: url("../img/review@2x.jpg"), url('../img/bg-zigzag-line.svg');
+      background-size: 350px, 100%;
+    }
   }
 }
 @media #{$desktop} {
@@ -24,6 +28,10 @@
     background-image: url("../img/review@1x.jpg"), url('../img/bg-zigzag-line.svg');
     background-size: 350px, 1150px 23px;
     background-position: 50px 0px, bottom;
+    @media #{$retina} {
+      background-image: url("../img/review@2x.jpg"), url('../img/bg-zigzag-line.svg');
+      background-size: 350px, 100%;
+    }
   }
 }
 
@@ -75,6 +83,15 @@
   height: 52px;
   margin-bottom: 38px;
   border: 1px solid #ececec;
+  outline: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--left {
     background: url('../img/icon-left-arrow.svg') no-repeat center;
