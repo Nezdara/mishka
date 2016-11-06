@@ -1,23 +1,68 @@
 .main-nav__list {
   display: flex;
-  flex-direction: column;
-  font-size: 0;
+  flex-wrap: wrap;
 }
 
 .main-nav__item {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  padding: 27px 45px 27px 75px;
+  padding: 21px 0;
   border-top: 1px solid $main-nav-item-border;
 
   &--logo {
-    padding: 21px 45px;
-    text-align: center;
+    padding: 21px 0;
+  }
+}
+
+@media #{$tablet} {
+  .main-nav__item {
+    width: auto;
+    padding: 5px;
+    align-items: center;
+    border-bottom: 1px solid $main-nav-item-border;
+    border-left: 1px solid $main-nav-item-border;
+
+    &--search {
+      min-width: 84px;
+      padding: 30px;
+    }
+
+    &--logo {
+      flex-grow: 1;
+      justify-content: flex-start;
+      padding-left: 55px;
+    }
+
+    &--basket {
+      min-width: 316px;
+    }
+  }
+}
+
+@media #{$desktop} {
+  .main-nav__item {
+
+    &--catalog,
+    &--form {
+      display: flex;
+      flex-basis: 238px;
+      order: -1;
+    }
+
+    &--logo {
+      border-left: 0;
+      padding-left: 20px;
+    }
+
+    &--basket {
+      border-right: 1px solid $main-nav-item-border;
+    }
   }
 }
 
 .main-nav__wrapper {
-  margin: 0 auto;
-  width: 200px;
+  flex-basis: 171px;
 }
 
 .main-nav__link {
@@ -54,15 +99,23 @@
     background: url("../img/icon-cart.svg") no-repeat;
   }
 }
-// Кнопка открытия-закрытия меню
+
+@media #{$tablet} {
+  .main-nav__link--search {
+    font-size: 0;
+
+    &::before {
+      top: -7px;
+      left: 3px;
+    }
+  }
+}
 
 .main-nav--closed .main-nav__toggle {
   font-size: 0;
   position: absolute;
   top: 30px;
   right: 30px;
-  z-index: 2;
-  cursor: pointer;
   border: none;
   outline: none;
   display: block;
@@ -78,8 +131,8 @@
   left: 0;
   width: 20px;
   height: 2px;
-  background-color: $text-color;
-  box-shadow: 0 6px 0 0 $text-color, 0 12px 0 0 $text-color;
+  background-color: $main-nav-toggle;
+  box-shadow: 0 6px 0 0 $main-nav-toggle, 0 12px 0 0 $main-nav-toggle;
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -87,14 +140,12 @@
   position: absolute;
   top: 30px;
   right: 30px;
-  z-index: 2;
-  cursor: pointer;
   border: none;
   outline: none;
   display: block;
   width: 21px;
   height: 20px;
-  background-color: transparent;
+  background-color: $bg-color;
 
   &::after,
   &::before {
@@ -102,16 +153,13 @@
     position: absolute;
     top: 8px;
     right: 0;
-    z-index: 2;
     width: 21px;
     height: 2px;
-    background-color: $text-color;
-    cursor: pointer;
+    background-color: $main-nav-toggle;
   }
 
   &::before {
     transform: rotate(45deg);
-    box-shadow: none;
   }
 
   &::after {
@@ -127,80 +175,15 @@
 }
 
 @media #{$tablet} {
-  .main-nav__list {
-    flex-direction: row;
-  }
-
   .main-nav .main-nav__toggle,
   .main-nav__item--catalog,
   .main-nav__item--form {
     display: none;
-  }
-
-  .main-nav__item {
-    width: auto;
-    padding: 30px 45px 30px 75px;
-    border: 1px solid $main-nav-item-border;
-    border-top: 0;
-
-    &--search {
-      width: 84px;
-      padding: 30px;
-      border-left: 0;
-      border-right: 0;
-    }
-
-    &--logo {
-      flex-grow: 1;
-      padding: 21px 45px;
-    }
-
-    &--basket {
-      width: 316px;
-    }
-  }
-
-  .main-nav__link--search {
-    font-size: 0;
-
-    &::before {
-      top: -7px;
-      left: 3px;
-    }
   }
 }
 
 @media #{$desktop} {
   .main-nav .main-nav__toggle {
     display: none;
-  }
-
-  .main-nav__item--catalog,
-  .main-nav__item--form {
-    display: block;
-    width: 238px;
-    padding: 30px;
-  }
-
-  .main-nav__item--catalog {
-    padding-left: 50px;
-  }
-
-  .main-nav__item--form {
-    border-left: 0;
-    border-right: 0;
-  }
-
-  .main-nav__item--logo {
-    text-align: left;
-    padding: 7px 30px 7px 24px;
-    flex-grow: 1;
-    order: 1;
-    border-left: 0;
-  }
-
-  .main-nav__item--basket,
-  .main-nav__item--search {
-    order: 2;
   }
 }
