@@ -1,0 +1,17 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  min-height: 830px;
+  width: 320px;
+  margin: 0 auto;
+}
+.features__title {
+  margin-bottom: 25px;
+}
+.features__item {
+  min-height: 125px;
+}
+.features__img {
+  margin-bottom: 10px;
+}

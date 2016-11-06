@@ -1,0 +1,46 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  min-height: 615px;
+  width: 320px;
+  margin: 0 auto;
+  background-image: url('../img/bg-zigzag-line.svg');
+  background-size: 100% 6px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.comments__title {
+  margin-bottom: 25px;
+}
+.comments__text {
+  margin: 0 0 20px 0;
+  line-height: 30px;
+  color: #444;
+}
+.comments__autor {
+  margin-bottom: 10px;
+}
+.comments__nic {
+  margin-bottom: 35px;
+}
+.comments__nav {
+  font-size: 0;
+}
+.comments__arrow {
+  display: inline-block;
+  width: 128px;
+  height: 52px;
+  margin-bottom: 38px;
+  border: 1px solid #ececec;
+  &--left {
+    background: url('../img/icon-left-arrow.svg') no-repeat center;
+    border-right: 0;
+  }
+  &--right {
+    background: url('../img/icon-right-arrow.svg') no-repeat center;
+  }
+}
+.comments__btn {
+  @include button;
+}

@@ -1,0 +1,61 @@
+.offer {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  min-height: 825px;
+  width: 320px;
+  margin: 0 auto;
+  background-image: url('../img/bg-zigzag-line.svg');
+  background-size: 100% 6px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.offer__hit-text {
+  color: #63d1bb;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.offer__text {
+  color: #444;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.offer__table {
+  width: 260px;
+  height: 120px;
+  margin-bottom: 28px;
+
+  tr {
+    border-bottom: 1px solid #ececec;
+  }
+
+  td {
+    min-width: 95px;
+  }
+}
+
+.offer__img {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.offer__price {
+  display: block;
+  text-align: center;
+  margin-bottom: 22px;
+  color: #444;
+  font-weight: 700;
+}
+
+.offer__btn {
+  @include button;
+  width: 100%;
+}

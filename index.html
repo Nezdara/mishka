@@ -48,11 +48,13 @@
       </div>
       <h1 class="sub-header__title">Милые штуки ручной работы для дома</h1>
       <div class="category">
-        <div class="category__item">
+        <div class="category__item category__item--interior">
           <a href="#" class="category__title">Предметы интерьера</a>
+          <img src="img/icon-interior.svg" alt="Светильник" class="categoty__img">
         </div>
-        <div class="category__item">
+        <div class="category__item category__item--toy">
           <a href="#" class="category__title">Детские игрушки</a>
+          <img src="img/icon-toy.svg" alt="Игрушка" class="categoty__img">
         </div>
       </div>
     </div>
@@ -74,7 +76,11 @@
           <td>15 см</td>
         </tr>
       </table>
-      <img class="offer__img" src="#" alt="triple set">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+        <img class="offer__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="triple set">
+      </picture>
       <span class="offer__price">Цена: 990 руб.</span>
       <button type="button" class="offer__btn">Заказать</button>
     </div>
@@ -111,8 +117,10 @@
       </blockquote>
       <b class="comments__autor">Анастасия Красильникова</b>
       <span class="comments__nic">@misssssiskras</span>
-      <button type="button" class="comments__arrow"></button>
-      <button type="button" class="comments__arrow"></button>
+      <div class="comments__nav">
+        <button type="button" class="comments__arrow comments__arrow--left"></button>
+        <button type="button" class="comments__arrow comments__arrow--right"></button>
+      </div>
       <button type="button" class="comments__btn">Написать</button>
     </div>
     <div class="contacts">
@@ -121,15 +129,15 @@
       <table class="contacts__info">
         <tr>
           <td>e-mail:</td>
-          <td>info@mimimishkashop.ru</td>
+          <td class="contacts__td--line">info@mimimishkashop.ru</td>
         </tr>
         <tr>
           <td>адрес:</td>
-          <td>г. Санкт-Петербург, <br>ул. Большая Конюшенная, <br>д. 19/8, офис 101</td>
+          <td>г. Санкт-Петербург, <br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</td>
         </tr>
       </table>
-      <button type="button" class="contacts__btn">Напишите нам</button>
       <div class="contacts__map"></div>
+      <button type="button" class="contacts__btn">Напишите нам</button>
     </div>
   </main>
   <footer class="footer">
