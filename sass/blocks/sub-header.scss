@@ -11,14 +11,17 @@
     padding-top: 90px;
     background-image: url('../img/hero-mobile@1x.jpg');
     background-position: top;
-    background-repeat: no-repeat;
-
-    @media #{$retina} {
-      background-image: url('../img/hero-mobile@2x.jpg');
-    }
+    background-repeat: no-repeat;    
   }
 }
 
+@media #{$mobile-only} {
+  .sub-header--index {
+    @media #{$retina} {
+      background-image: url('../img/hero-mobile@2x.jpg');
+  }
+}
+}
 @media #{$tablet} {
   .sub-header {
     padding: 0 50px;

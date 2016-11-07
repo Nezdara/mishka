@@ -7,10 +7,6 @@
   font-weight: 700;
   line-height: 24px;
   color: $category-btn-link;
-
-  &:active {
-    color: $category-btn-link-down;
-  }
 }
 
 @media #{$tablet} {
@@ -33,6 +29,10 @@
   justify-content: space-between;
   height: 103px;
   padding: 27px;
+
+  &:active {
+    color: $category-btn-link-down;
+  }
 
   &--interior {
     background-color: $category-btn-left;
