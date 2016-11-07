@@ -4,10 +4,11 @@
   padding: 30px;
   width: 100%;
   background-image: url('../img/bg-zigzag-line.svg');
-  background-size: 100% 6px;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom;
 }
+
 @media #{$tablet} {
   .offer {
     flex-direction: row;
@@ -18,6 +19,7 @@
     min-height: 628px;
   }
 }
+
 @media #{$desktop} {
   .offer {
     position: relative;
@@ -35,6 +37,7 @@
   line-height: 16px;
   text-transform: uppercase;
 }
+
 @media #{$desktop} {
   .offer__hit-text {
     text-align: center;
@@ -43,24 +46,29 @@
     left: 100px;
   }
 }
+
 @media #{$tablet} {
   .offer__title {
     margin-bottom: 55px;
     flex-grow: 1;
     z-index: 2;
   }
+}
 
+@media #{$desktop} {
+  .offer__title {
+    width: 100%;
+  }
+}
+
+@media #{$tablet} {
   .offer__dscr {
     display: flex;
     flex-direction: column;
     width: 50%;
   }
 }
-@media #{$desktop} {
-  .offer__title {
-    width: 100%;
-  }
-}
+
 @media #{$desktop} {
   .offer__dscr {
     width: 33%;
@@ -79,13 +87,14 @@
   margin: 0 auto 28px;
 
   tr {
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid $offer-table-border;
   }
 
   td {
     min-width: 95px;
   }
 }
+
 @media #{$tablet} {
   .offer__table {
     width: 100%;
@@ -96,12 +105,14 @@
   text-align: center;
   margin-bottom: 26px;
 }
+
 @media #{$tablet} {
   .offer__img-wrapper {
     width: 50%;
     text-align: right;
   }
 }
+
 @media #{$desktop} {
   .offer__img-wrapper {
     width: 525px;
@@ -112,12 +123,14 @@
 .offer__footer {
   text-align: center;
 }
+
 @media #{$tablet} {
   .offer__footer {
     width: 50%;
     margin-top: -123px;
   }
 }
+
 @media #{$desktop} {
   .offer__footer {
     width: 33%;
@@ -132,6 +145,7 @@
   color: $offer-price-text;
   font-weight: 700;
 }
+
 @media #{$desktop} {
   .offer__price {
     font-size: 18px;
@@ -142,6 +156,7 @@
   @include button;
   width: 100%;
 }
+
 @media #{$tablet} {
   .offer__btn {
     width: 292px;

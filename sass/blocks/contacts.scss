@@ -3,6 +3,7 @@
   flex-direction: column;
   padding: 30px;
 }
+
 @media #{$tablet} {
   .contacts {
     flex-direction: row;
@@ -11,6 +12,7 @@
     padding: 45px 50px;
   }
 }
+
 @media #{$desktop} {
   .contacts {
     position: relative;
@@ -23,12 +25,14 @@
   margin-top: 20px;
   margin-bottom: 25px;
 }
+
 @media #{$tablet} {
   .contacts__title {
     flex-grow: 1;
     margin-bottom: 45px;
   }
 }
+
 @media #{$desktop} {
   .contacts__title {
     width: 50%;
@@ -38,11 +42,13 @@
 .contacts__img {
   display: none;
 }
+
 @media #{$tablet} {
   .contacts__img {
     display: inline;
   }
 }
+
 @media #{$desktop} {
   .contacts__img {
     position: absolute;
@@ -64,6 +70,7 @@
 }
 
 .contacts__email {
+
   &:hover {
     color: $contacts-email-hover;
   }
@@ -71,25 +78,26 @@
   &:active {
     color: $contacts-email-down;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 154px;
+    height: 1px;
+    top: 27px;
+    left: 0;
+    background-color: $contacts-email;
+
+    &:hover {
+      background-color: $contacts-email-hover;
+    }
+
+    &:active {
+      background-color: $contacts-email-down;
+    }
+  }
 }
 
-.contacts__email::after {
-  content: "";
-  position: absolute;
-  width: 154px;
-  height: 1px;
-  top: 27px;
-  left: 0;
-  background-color: $contacts-email;
-}
-
-.contacts__email:hover::after {
-  background-color: $contacts-email-hover;
-}
-
-.contacts__email:active::after {
-  background-color: $contacts-email-down;
-}
 @media #{$tablet} {
   .contacts__info {
     width: 100%;
@@ -107,26 +115,28 @@
       font-size: 16px;
     }
   }
-  @media #{$desktop} {
-    .contacts__info {
-      width: 50%;
-      margin: 0 0 125px;
+}
 
-      & tbody {
-        display: table;
-        height: 155px;
-        margin: 0;
-      }
+@media #{$desktop} {
+  .contacts__info {
+    width: 50%;
+    margin: 0 0 125px;
+
+    & tbody {
+      display: table;
+      height: 155px;
+      margin: 0;
     }
   }
 }
 
 .contacts__map {
-  width: 100%;
-  min-height: 457px;
+  width: auto;
+  height: 457px;
   margin-bottom: 40px;
-  background: green;
+  background: $contacts-bg-map;
 }
+
 @media #{$desktop} {
   .contacts__map {
     width: 525px;
@@ -140,12 +150,14 @@
 .contacts__btn {
   @include button;
 }
+
 @media #{$tablet} {
   .contacts__btn {
     margin: 0 auto;
     width: 230px;
   }
 }
+
 @media #{$desktop} {
   .contacts__btn {
     margin: 0;

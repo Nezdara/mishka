@@ -7,29 +7,37 @@
   background-repeat: no-repeat;
   background-position: bottom;
 }
+
 @media #{$tablet} {
   .comments {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 50px;
-    background-image: url("../img/review@1x.jpg"), url('../img/bg-zigzag-line.svg');
+    background-image: url('../img/review@1x.jpg'),
+                      url('../img/bg-zigzag-line.svg');
     background-size: 350px, 100%;
     background-position: top left, bottom;
+
     @media #{$retina} {
-      background-image: url("../img/review@2x.jpg"), url('../img/bg-zigzag-line.svg');
+      background-image: url('../img/review@2x.jpg'),
+                        url('../img/bg-zigzag-line.svg');
       background-size: 350px, 100%;
     }
   }
 }
+
 @media #{$desktop} {
   .comments {
     padding: 50px 50px 50px 225px;
-    background-image: url("../img/review@1x.jpg"), url('../img/bg-zigzag-line.svg');
+    background-image: url('../img/review@1x.jpg'),
+                      url('../img/bg-zigzag-line.svg');
     background-size: 350px, 1150px 23px;
     background-position: 50px 0px, bottom;
+
     @media #{$retina} {
-      background-image: url("../img/review@2x.jpg"), url('../img/bg-zigzag-line.svg');
+      background-image: url('../img/review@2x.jpg'),
+                        url('../img/bg-zigzag-line.svg');
       background-size: 350px, 100%;
     }
   }
@@ -38,6 +46,7 @@
 .comments__title {
   margin-bottom: 25px;
 }
+
 @media #{$tablet} {
   .comments__title {
     height: 52px;
@@ -51,6 +60,7 @@
   line-height: 30px;
   color: $comments-text;
 }
+
 @media #{$tablet} {
   .comments__text {
     font-size: 16px;
@@ -71,6 +81,7 @@
   font-size: 0;
   margin: 0 auto;
 }
+
 @media #{$tablet} {
   .comments__nav {
     margin: 0;
@@ -102,6 +113,7 @@
     background: url('../img/icon-right-arrow.svg') no-repeat center;
   }
 }
+
 @media #{$tablet} {
   .comments__arrow {
     width: 78px;
@@ -114,6 +126,7 @@
 .comments__btn {
   @include button;
 }
+
 @media #{$tablet} {
   .comments__btn {
     height: 52px;
