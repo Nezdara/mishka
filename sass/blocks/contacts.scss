@@ -137,13 +137,19 @@
   background: $contacts-bg-map;
 }
 
+@media #{$tablet} {
+  .contacts__map {
+  width: 100%;
+ }
+}
+
 @media #{$desktop} {
   .contacts__map {
     width: 525px;
     height: 457px;
-    position: absolute;
+    position: absolute !important;
     top: 70px;
-    right: 0;
+    right: 50px;
   }
 }
 
