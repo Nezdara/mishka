@@ -60,35 +60,47 @@
       </div>
       <h1 class="sub-header__title">Милые штуки ручной работы для дома</h1>
       <div class="category">
-        <div class="category__item">
+        <div class="category__item category__item--interior">
           <a href="#" class="category__title">Предметы интерьера</a>
+          <img src="img/icon-interior.svg" alt="Светильник" class="categoty__img">
         </div>
-        <div class="category__item">
+        <div class="category__item category__item--toy">
           <a href="#" class="category__title">Детские игрушки</a>
+          <img src="img/icon-toy.svg" alt="Игрушка" class="categoty__img">
         </div>
       </div>
     </div>
     <div class="offer">
       <h1 class="offer__title">Вязаные корзинки</h1>
       <span class="offer__hit-text">Товар недели</span>
-      <p class="offer__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-      <table class="offer__table">
-        <tr>
-          <td>Цвет:</td>
-          <td>«Тиффани»/серый</td>
-        </tr>
-        <tr>
-          <td>Диаметр:</td>
-          <td>25 см</td>
-        </tr>
-        <tr>
-          <td>Высота:</td>
-          <td>15 см</td>
-        </tr>
-      </table>
-      <img class="offer__img" src="#" alt="triple set">
-      <span class="offer__price">Цена: 990 руб.</span>
-      <button type="button" class="offer__btn">Заказать</button>
+      <div class="offer__dscr">
+        <p class="offer__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class="offer__table">
+          <tr>
+            <td>Цвет:</td>
+            <td>«Тиффани»/серый</td>
+          </tr>
+          <tr>
+            <td>Диаметр:</td>
+            <td>25 см</td>
+          </tr>
+          <tr>
+            <td>Высота:</td>
+            <td>15 см</td>
+          </tr>
+        </table>
+      </div>
+      <div class="offer__img-wrapper">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+          <img class="offer__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="triple set">
+        </picture>
+      </div>
+      <div class="offer__footer">
+        <span class="offer__price">Цена: 990 руб.</span>
+        <button type="button" class="offer__btn">Заказать</button>
+      </div>
     </div>
     <div class="features">
       <h1 class="features__title">Коротко о нас:</h1>
@@ -121,10 +133,14 @@
       <h1 class="comments__title">Отзывы</h1>
       <blockquote class="comments__text">Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!
       </blockquote>
-      <b class="comments__autor">Анастасия Красильникова</b>
-      <span class="comments__nic">@misssssiskras</span>
-      <button type="button" class="comments__arrow"></button>
-      <button type="button" class="comments__arrow"></button>
+      <div class="comments__text-footer">
+        <b class="comments__autor">Анастасия Красильникова</b>
+        <span class="comments__nic">@misssssiskras</span>
+      </div>
+      <div class="comments__nav">
+        <button type="button" class="comments__arrow comments__arrow--left"></button>
+        <button type="button" class="comments__arrow comments__arrow--right"></button>
+      </div>
       <button type="button" class="comments__btn">Написать</button>
     </div>
     <div class="contacts">
@@ -133,15 +149,19 @@
       <table class="contacts__info">
         <tr>
           <td>e-mail:</td>
-          <td>info@mimimishkashop.ru</td>
+          <td><a href="" class="contacts__email">info@mimimishkashop.ru</a></td>
         </tr>
         <tr>
           <td>адрес:</td>
-          <td>г. Санкт-Петербург, <br>ул. Большая Конюшенная, <br>д. 19/8, офис 101</td>
+          <td>г. Санкт-Петербург, <br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</td>
         </tr>
       </table>
+      <div class="contacts__map">
+        <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5fibBArR_5YbhEKcEgDgXvI_OmJgLrkM&callback=initMap">
+        </script>
+      </div>
       <button type="button" class="contacts__btn">Напишите нам</button>
-      <div class="contacts__map"></div>
     </div>
   </main>
   <footer class="footer">
