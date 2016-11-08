@@ -15,8 +15,11 @@
 
 @media #{$desktop} {
   .promo {
+    flex-direction: column;
     width: 100%;
+    height: 455px;
     margin: 0;
+    margin-bottom: 105px;
   }
 }
 
@@ -59,9 +62,24 @@
   display: block;
 }
 
+.promo__video {
+  width: 260px;
+  height: 150px;
+  background-color: $video-bg;
+}
+
 @media #{$tablet} {
   .promo__video {
     order: -1;
+    width: 568px;
+    height: 387px;
+  }
+}
+
+@media #{$desktop} {
+  .promo__video {
+    width: 682px;
+    height: 455px;
   }
 }
 
@@ -81,13 +99,11 @@
 
 @media #{$desktop} {
   .promo__dscr {
+    margin: 0;
     width: 368px;
     height: 275px;
     padding-left: 80px;
     padding-right: 50px;
-    margin-left: auto;
-    margin-top: -275px;
-    margin-bottom: 105px;
   }
 }
 
