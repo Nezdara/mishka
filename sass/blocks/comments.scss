@@ -1,0 +1,135 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-image: url('../img/bg-zigzag-line.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+@media #{$tablet} {
+  .comments {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px;
+    background-image: url('../img/review@1x.jpg'),
+                      url('../img/bg-zigzag-line.svg');
+    background-size: 350px, 100%;
+    background-position: top left, bottom;
+
+    @media #{$retina} {
+      background-image: url('../img/review@2x.jpg'),
+                        url('../img/bg-zigzag-line.svg');
+      background-size: 350px, 100%;
+    }
+  }
+}
+
+@media #{$desktop} {
+  .comments {
+    padding: 50px 50px 50px 225px;
+    background-image: url('../img/review@1x.jpg'),
+                      url('../img/bg-zigzag-line.svg');
+    background-size: 350px, 1150px 23px;
+    background-position: 50px 0px, bottom;
+
+    @media #{$retina} {
+      background-image: url('../img/review@2x.jpg'),
+                        url('../img/bg-zigzag-line.svg');
+      background-size: 350px, 100%;
+    }
+  }
+}
+
+.comments__title {
+  margin-bottom: 25px;
+}
+
+@media #{$tablet} {
+  .comments__title {
+    height: 52px;
+    order: -2;
+    margin-bottom: 50px;
+  }
+}
+
+.comments__text {
+  margin: 0 0 20px;
+  line-height: 30px;
+  color: $comments-text;
+}
+
+@media #{$tablet} {
+  .comments__text {
+    font-size: 16px;
+  }
+}
+
+.comments__autor {
+  margin-bottom: 10px;
+}
+
+.comments__text-footer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+
+.comments__nav {
+  font-size: 0;
+  margin: 0 auto;
+}
+
+@media #{$tablet} {
+  .comments__nav {
+    margin: 0;
+  }
+}
+
+.comments__arrow {
+  display: inline-block;
+  width: 128px;
+  height: 52px;
+  margin-bottom: 38px;
+  border: 1px solid #ececec;
+  outline: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--left {
+    background: url('../img/icon-left-arrow.svg') no-repeat center;
+    border-right: 0;
+  }
+
+  &--right {
+    background: url('../img/icon-right-arrow.svg') no-repeat center;
+  }
+}
+
+@media #{$tablet} {
+  .comments__arrow {
+    width: 78px;
+    height: 34px;
+    border: 0;
+    margin-bottom: 185px;
+  }
+}
+
+.comments__btn {
+  @include button;
+}
+
+@media #{$tablet} {
+  .comments__btn {
+    height: 52px;
+    order: -1;
+  }
+}
