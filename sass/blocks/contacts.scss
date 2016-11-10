@@ -94,8 +94,19 @@
 }
 
 @media #{$tablet} {
+  .contacts__email {
+    margin-right: 60px;
+  }
+}
+
+@media #{$desktop} {
+  .contacts__email {
+    margin-right: 0;
+  }
+}
+
+@media #{$tablet} {
   .contacts__info {
-    width: 668px;
     font-size: 16px;
 
     & tbody {
