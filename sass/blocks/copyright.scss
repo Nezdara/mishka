@@ -25,3 +25,17 @@
     color: $copyright-text-down;
   }
 }
+
+.copyright__logo {
+  width: 27px;
+  height: 34px;
+  fill: $copyright-icon;
+
+  &:hover {
+    fill: $copyright-icon-hover;
+  }
+
+  &:active {
+    fill: $copyright-icon-down;
+  }
+}
