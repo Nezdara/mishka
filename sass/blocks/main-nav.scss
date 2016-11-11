@@ -87,6 +87,7 @@
     width: 22px;
     height: 22px;
     background: url("../img/icon-search.svg") no-repeat;
+    background-size: 100%;
   }
 
   &--basket::before {
@@ -97,7 +98,7 @@
     width: 22px;
     height: 22px;
     background: url("../img/icon-cart.svg") no-repeat;
-    background-size: 100%;
+    background-size: 100%;   
   }
 }
 
