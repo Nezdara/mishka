@@ -84,8 +84,8 @@
     position: absolute;
     top: 2px;
     left: -40px;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     background: url("../img/icon-search.svg") no-repeat;
   }
 
@@ -94,9 +94,10 @@
     position: absolute;
     top: 2px;
     left: -40px;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     background: url("../img/icon-cart.svg") no-repeat;
+    background-size: 100%;
   }
 }
 
