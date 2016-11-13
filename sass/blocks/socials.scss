@@ -21,3 +21,30 @@
   margin: 0 20px;
   font-size: 0;
 }
+
+.socials__icon {
+  fill: $footer-icon;
+
+  &:hover {
+    fill: $footer-icon-hover;
+  }
+
+  &:active {
+    fill: $footer-icon-down;
+  }
+
+  &--insta {
+    width: 22px;
+    height: 22px;
+  }
+
+  &--fb {
+    width: 15px;
+    height: 28px;
+  }
+
+  &--twitter {
+    width: 24px;
+    height: 20px;
+  }
+}

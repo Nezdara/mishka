@@ -40,8 +40,16 @@ $btn-color-hover: #444444;
 
 $footer-bg: #f1f1f1;
 
+$footer-icon: #221f1f;
+$footer-icon-hover: #46c1ae;
+$footer-icon-down: rgba(#46c1ae, 0.3);
+
 $copyright-border: #e5e5e5;
 $copyright-text-down: rgba(#000000, .3);
+
+$copyright-icon: #63d1bb;
+$copyright-icon-hover: #46c1ae;
+$copyright-icon-down: rgba(#46c1ae, .3);
 
 $item-border: #ededed;
 
@@ -50,6 +58,10 @@ $item-link-hover: rgba(#000000, .6);
 $item-link-down: rgba(#000000, .3);
 
 $item-text: #444444;
+
+$item-icon: #d5d5d5;
+$item-icon-hover: #6dd4bf;
+$item-icon-down: rgba(#6dd4bf, .3);
 
 $video-bg: #cdebe9;
 $legend-color: #63d1bb;

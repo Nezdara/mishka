@@ -138,3 +138,17 @@
     font-size: 16px;
   }
 }
+
+.catalog-item__icon {
+  width: 20px;
+  height: 19px;
+  fill: $item-icon;
+
+  &:hover {
+    fill: $item-icon-hover;
+  }
+
+  &:active {
+    fill: $item-icon-down;
+  }
+}
