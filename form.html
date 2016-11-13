@@ -6,9 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Вязание на заказ</title>
   <link href="css/style.min.css" rel="stylesheet">
-  <script>
-    document.createElement( "picture" );
-  </script>
   <script src="js/picturefill.min.js"></script>
 </head>
 <body>
@@ -16,7 +13,7 @@
     <nav class="main-nav main-nav--closed">
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--logo">
-          <a href="index.html">
+          <a class="main-nav__link main-nav__link--logo" href="index.html">
             <picture>
               <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -151,26 +148,39 @@
   </main>
   <footer class="footer">
     <div class="footer-logo">
-      <img src="img/logo-footer.svg" alt="Логотип Мишка">
+      <a href="index.html">
+        <svg class="footer-logo__img">
+          <use xlink:href="img/symbols.svg#logo-footer"></use>
+        </svg>
+      </a>
     </div>
     <div class="socials">
       <a class="socials__link" href="https://www.instagram.com/htmlacademy/">Мы в Instagram
-        <img src="img/icon-insta.svg" alt="Instagram">
+        <svg class="socials__icon socials__icon--insta">
+          <use xlink:href="img/symbols.svg#icon-insta"></use>
+        </svg>
       </a>
       <a class="socials__link" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке
-        <img src="img/icon-fb.svg" alt="Facebook">
+        <svg class="socials__icon socials__icon--fb">
+          <use xlink:href="img/symbols.svg#icon-fb"></use>
+        </svg>
       </a>
       <a class="socials__link" href="https://twitter.com/htmlacademy_ru">Мы в Твитере
-        <img src="img/icon-twitter.svg" alt="Twitter">
+        <svg class="socials__icon socials__icon--twitter">
+          <use xlink:href="img/symbols.svg#icon-twitter"></use>
+        </svg>
       </a>
     </div>
     <div class="copyright">
       <a class="copyright__text" href="https://htmlacademy.ru/">Разработано:</a>
       <a href="https://htmlacademy.ru/">
-        <img class="copyright__logo" src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy">
+        <svg class="copyright__logo">
+          <use xlink:href="img/symbols.svg#logo-htmlacademy"></use>
+        </svg>
       </a>
     </div>
   </footer>
   <script type="text/javascript" src="js/script.js"></script>
+  <script src="js/svgxuse.min.js"></script>
 </body>
 </html>
