@@ -63,6 +63,7 @@
 
 @media #{$tablet} {
   .comments__text {
+    width: 100%;
     font-size: 16px;
   }
 }
@@ -79,13 +80,7 @@
 
 .comments__nav {
   font-size: 0;
-  margin: 0 auto;
-}
-
-@media #{$tablet} {
-  .comments__nav {
-    margin: 0;
-  }
+  text-align: center;
 }
 
 .comments__arrow {
